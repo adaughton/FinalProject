@@ -1,30 +1,24 @@
-# Final Project
-For your final project, use the skills you've developed in this class to tackle a new problem. For example, you could develop a visualization for a complex dataset, construct a physicalization, visualize an algorithmic process, or run an experiment to explore graphical perception. Be creative and have fun! 
+### Running the code
 
-<h2>Requirements:</h2>
-<h3>Proposal:</h3>
-Please submit a preliminary project proposal that outlines your project's motivating problem and workplan describing what you intend to accomplish to Dr. Szafir via email by Monday, 4.25 at 11:59pm (please send a single email per group with all group members CC'ed). This will take place of that week's reading assignment. I will provide you with guiding feedback for your project and a set of expectations based on this proposal.   
+##### Option 1:
+1. Activate the virtual environment included (`. env/bin/activate`) in the folder with `env` in it (`cd sir-models`)
+2. Run the Django app:
+`````
+cd intervention_analysis
+./manage.py runserver
+````````
 
-Please note that this is the latest deadline that I would like to see the proposal by. I'd recommend you submit earlier to give yourself more time to work on the final project. I will provide feedback for all proposals sent before the deadline within 24 hours.   
+##### Option 2:
+1. Pip install requirements
+`````
+cd intervention_analysis
+pip install -r requirements.txt
+`````
 
-<h3>Deliverables:</h3>
-You will be graded on both the artifacts you generate as part of this project and a project write-up. As stated above, expectations for the artifacts will be provided as feedback for your proposal.   
-
-You should approach the write-up like a research paper. It should contain the following sections: 
-<ul>
-<li>A 1-paragraph abstract that summarizes your motivating problem, what you did, and what you found. </li>
-<li>An introduction that describes the motivating problem and why it's interesting or important. </li> 
-<li>A related work section that summarizes research related to your project (minimum eight citations). </li>
-<li>A detailed description of your project and justifications for any design elements. </li>
-<li>A discussion of what you found.</li>
-</ul>
-
-The write-up should be a <b>minimum</b> of two pages using the IEEE VIS Poster Format: http://junctionpublishing.org/vgtc/Tasks/camera.html
-
-As with Project 1, please email me a confidential post-mortem that outlines your roles, how you'd rate your own contribution, and how you'd rate the contributions of your teammates. 
-
-<h2>Submission</h2>
-Final projects are due 11:59pm on 5.5; however, you will have a no-cost extension until 5.8 at 11:59pm. Note that due to University grading deadlines, late projects will not be accepted.    
-
-
-Please upload all deliverables through GitHub Classroom. This includes any code, data, documentation, or write-up. If you have physical artifacts, please either reach out to me to set up an appointment to present your artifacts or submit an explanatory video and/or set of photographs. 
+### Workplan & Deliverables
+1. Change the "intervention analysis" graph to an interactive parallel coordinates plot **Done**
+2. Modify axes so they have meaningful names instead of symbols **I thought this was done, but found some more colloquial names during our demos. There has definitely been progress though**
+3. Add the user's control measure information to the first graph ("SIR Curve(s)") **Done**
+4. Get rid of the third and fourth graphs and replace with a series of heat maps that show how effective the control measure is, across the user's defined parameter ranges. **This is now the second graph**
+5. Update the user input fields so they are sliding bars instead of input fields. Also fix error handing so if a user puts some that isn't valid they are informed in some sort of useful way.  **I believe this is largely fixed. I had sliding bars, and then actually decided they were hard to use, and moved back to text boxes, but adjusted them to be smaller**
+6. Add some background information about what the model is, what the parameters are, and how the model works to a separate FAQ page. **I didn't get to this. Developing this content in a thoughtful way is actually quite time consuming. There is a menu that goes to other pages, but the relevant content still needs work**
