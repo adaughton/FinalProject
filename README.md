@@ -6,7 +6,6 @@
 3. Install dependencies into the environment using pip (`pip install -r requirements.txt`)
 4. Run the Django app:
 `````
-cd intervention_analysis
 ./manage.py runserver
 ````````
 
