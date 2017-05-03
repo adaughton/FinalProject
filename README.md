@@ -1,6 +1,5 @@
 ### Running the code
 
-##### Option 1:
 1. Create a virtual environment (`pyvenv env`) in the top folder
 2. Activate virtual environment (`. env/bin/activate`)
 3. Install dependencies into the environment using pip (`pip install -r requirements.txt`)
