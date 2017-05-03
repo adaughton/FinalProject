@@ -1,19 +1,14 @@
 ### Running the code
 
 ##### Option 1:
-1. Activate the virtual environment included (`. env/bin/activate`) in the folder with `env` in it (`cd sir-models`)
-2. Run the Django app:
+1. Create a virtual environment (`pyvenv env`) in the top folder
+2. Activate virtual environment (`. env/bin/activate`)
+3. Install dependencies into the environment using pip (`pip install -r requirements.txt`)
+4. Run the Django app:
 `````
 cd intervention_analysis
 ./manage.py runserver
 ````````
-
-##### Option 2:
-1. Pip install requirements
-`````
-cd intervention_analysis
-pip install -r requirements.txt
-`````
 
 ### Workplan & Deliverables
 1. Change the "intervention analysis" graph to an interactive parallel coordinates plot **Done**
