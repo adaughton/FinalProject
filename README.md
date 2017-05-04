@@ -1,9 +1,10 @@
 ### Running the code
-
-1. Create a virtual environment (`pyvenv env`) in the top folder
-2. Activate virtual environment (`. env/bin/activate`)
-3. Install dependencies into the environment using pip (`pip install -r requirements.txt`)
-4. Run the Django app:
+1. Install homebrew
+2. Install postgresql (`brew install postresql`)
+3. Create a virtual environment (`pyvenv env`) in the top folder
+4. Activate virtual environment (`. env/bin/activate`)
+5. Install dependencies into the environment using pip (`pip install -r requirements.txt`)
+6. Run the Django app:
 `````
 ./manage.py runserver
 ````````
