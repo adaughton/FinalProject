@@ -4,6 +4,10 @@
     padding: 20px 20px 10px 20px;
 }
 
+a {
+   color:#000000;
+}
+
 h2 a {
    font-family: 'PT Sans Narrow', sans-serif;
 }
@@ -14,6 +18,11 @@ body {
    padding-bottom:80px;
    background-color: #F8F7F8;
 }
+
+.popover {
+    border: 2px dotted #F7B745;
+}
+
 /* help from http://www.w3schools.com/css/css_dropdowns.asp*/
 .dropbtn {
     color: white;

@@ -3,27 +3,19 @@
 {% block sidebar %}
 <h2>Inputs</h2>
 <form action ="" method = "get">
-
-   <label>Initial number susceptible:</label> <br>{{ form.S0 }}<br>
-   <label>Initial number infected:</label><br>{{ form.I0 }}<br>
-   <label>Infectiousness period (days) range:</label><br>
+   <label><a href="#" data-toggle="popover" data-content="How many are at risk of becoming infected? Must be > 2.">Initial number susceptible:</a></label> <br>{{ form.S0 }}<br>
+   <label><a href="#" data-toggle="popover" data-content="How many are infected? Must be > 0.">Initial number infected:</a></label><br>{{ form.I0 }}<br>
+   <label><a href="#" data-toggle="popover" data-content="How many days can an infected person be infectious for? Must be an integer">Infectiousness period (days) range:</a></label><br>
          {{ form.days_low}} to {{form.days_high}}<br>
-   <label>R₀ range:</label><br>
+   <label><a href="#" data-toggle="popover" data-content="What's the range of the reproductive number? Must be > 1. Larger ranges can cause lag in the system. The reproductive number describes the number of people 1 sick person infects.">R₀ range:</a></label><br>
       {{ form.r0_low}} to {{form.r0_high}}<br>
-   <label>Control effectiveness:</label><br>{{ form.lamb }}<br>
-   <label>Control start:</label><br>{{ form.control_start }}<br>
+   <label><a href="#" data-toggle="popover" data-content="How effective is your control measure? This describes the fraction removed from the susceptible population every day. Must be a fraction between 0 and 1.">Control effectiveness:</a></label><br>{{ form.lamb }}<br>
+   <label><a href="#" data-toggle="popover" data-content="What day does the control start on? Must be a positive integer.">Control start:</a></label><br>{{ form.control_start }}<br>
    <input type="submit" value="OK">
 </form>
 {% endblock %}
 {% block content %}
 
-<script src="../static/highcharts.js"></script>
-<script src="../static/highcharts-more.js"></script>
-<script src="../static/heatmap.js"></script>
-<script src="../static/exporting.js"></script>
-<script src="../static/js/sir_chart.js"></script>
-<!-- <script src="../static/js/ia_linechart.js"></script> -->
-<script src="../static/plotly-latest.min.js"></script>
 <!-- <script src="../static/graph.js"></script>
 Maps the Python template context variables from views.py to the Highchart js variables -->
 {% if message %}
@@ -61,6 +53,11 @@ Maps the Python template context variables from views.py to the Highchart js var
 
 //   var pcp_series = {{pcp_series|safe}}
 
+
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+    console.log('pop');
+});
 
 var pcp_plot = document.getElementById('pcp')
 var data = [{
