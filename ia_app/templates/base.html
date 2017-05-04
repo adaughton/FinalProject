@@ -22,11 +22,14 @@
    <div class="dropdown">
       <button class="dropbtn">Menu</button>
       <div class="dropdown-content">
+        <a href="/">Home</a>
         <a href="/help">Tutorial/FAQs</a>
         <a href="#">Help me!</a>
         <a href="/contact">Contact us!</a>
       </div>
    </div>
+
+
 
    <div class="navbar navbar-default navbar-fixed-bottom">
       <div class="container">
@@ -43,12 +46,12 @@
 
    <div class="container">
 
-      <div id="sidebar" class="col-md-3">
+      <div id="sidebar" class="col-md-2">
         {% block sidebar %}
         {% endblock %}
       </div>
 
-      <div id="content" class="col-md-9">
+      <div id="content" class="col-md-10">
          {% block content %}
          {% endblock %}
       </div>

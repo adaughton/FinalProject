@@ -4,14 +4,14 @@
 <h2>Inputs</h2>
 <form action ="" method = "get">
 
-   <label>Initial number susceptible:</label> {{ form.S0 }}<br>
-   <label>Initial number infected:</label>{{ form.I0 }}<br>
+   <label>Initial number susceptible:</label> <br>{{ form.S0 }}<br>
+   <label>Initial number infected:</label><br>{{ form.I0 }}<br>
    <label>Infectiousness period (days) range:</label><br>
          {{ form.days_low}} to {{form.days_high}}<br>
    <label>R₀ range:</label><br>
       {{ form.r0_low}} to {{form.r0_high}}<br>
-   <label>Control effectiveness:</label>{{ form.lamb }}<br>
-   <label>Control start:</label>{{ form.control_start }}<br>
+   <label>Control effectiveness:</label><br>{{ form.lamb }}<br>
+   <label>Control start:</label><br>{{ form.control_start }}<br>
    <input type="submit" value="OK">
 </form>
 {% endblock %}
@@ -27,8 +27,9 @@
 <!-- <script src="../static/graph.js"></script>
 Maps the Python template context variables from views.py to the Highchart js variables -->
 {% if message %}
-   <h2 align="center"> {{ message }}
-<a href="?S0=10000&I0=1&days_low=5&days_high=7&r0_low=1.8&r0_high=2.5&lamb=0.1&control_start=5" class="button">Or, show me an example!</a>   </h2>
+   <h2 align="center"> {{ message }}</h2><br>
+<h3 align="center">
+<a href="?S0=10000&I0=1&days_low=5&days_high=7&r0_low=1.8&r0_high=2.5&lamb=0.1&control_start=5" class="button">Or, show me an example!</a></h3>
 {% endif %}
 <div id="content" class="col-md-6">
    <div id='sir_line' class="chart" height = 500 width=700></div>
