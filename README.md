@@ -8,6 +8,16 @@
 `````
 ./manage.py runserver
 ````````
+### Some notes about parameters
+
+1. Initial number susceptible has to be > 2 (range 1000-10,000 is pretty normal)
+2. Initial number infected has to be greater than 0
+3. Infectiousness period has to be an integer between 1 and 14
+4. R0 range has to be greater than 1, but can be a float. Increasingly large ranges cause the server to give out. This is a problem I'm working on. 
+5. Control effectiveness must be between 0 and 1. Floats are acceptable. This describes the fraction of the susceptible population that are removed at each time point (so 0.01-0.1 are realistic values)
+6. The control start has to be an integer.
+
+Future versions will have hover that describe what the parameters are... this is something I'm actively working on.
 
 ### Workplan & Deliverables
 1. Change the "intervention analysis" graph to an interactive parallel coordinates plot **Done**
