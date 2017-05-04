@@ -17,7 +17,10 @@
 5. Control effectiveness must be between 0 and 1. Floats are acceptable. This describes the fraction of the susceptible population that are removed at each time point (so 0.01-0.1 are realistic values)
 6. The control start has to be an integer.
 
-These are also described in popovers on each input.
+These are also described in popovers on each input. However, they currently only work after the graphs pop up. I'm working on this.
+
+### Notes about web browser
+I did most development on Chrome. I also tested briefly on Firefox, but Chrome is probably best, if that's an option for you.
 
 ### Workplan & Deliverables
 1. Change the "intervention analysis" graph to an interactive parallel coordinates plot **Done**
